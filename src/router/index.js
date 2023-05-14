@@ -19,12 +19,7 @@ let populateItemIds = (itemIds) =>{
 
 router.get('/cart', (req, res) => {
     
-    // console.log(cart);
     const cartProducts  = req.cartIds.map(id=> products.find(p=> p.id === id))
-
-    // const {userId} = req.params;
-    // let shoppingCart = shoppingCarts.find(cart => cart.userId === userId);
-    // res.json(shoppingCart.itemIds);
 
     res.json(cartProducts);
 })
